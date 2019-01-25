@@ -1,0 +1,21 @@
+
+android {
+    // Note: component/feature module not aware of `mode` dimension
+    // If you want to have a different behavior for insiders, market builds - specify the configuration
+    // in the `config` module or use ECS instead.
+    flavorDimensions "app"
+
+    productFlavors {
+        app1 {
+            dimension 'app'
+        }
+
+        app2 {
+            dimension 'app'
+        }
+
+        app3 {
+            dimension 'app'
+        }
+    }
+}

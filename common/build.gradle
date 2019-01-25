@@ -1,0 +1,40 @@
+/**
+ * This is common feature module. It's role to simplify dependencies resolution in the project.
+ *
+ */
+apply plugin: 'com.android.library'
+apply from: '../component.gradle'
+
+android {
+    compileSdkVersion projectCompileSdk
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        minSdkVersion projectMinSdk
+        targetSdkVersion projectTargetSdk
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api libs.support.appCompat
+    api libs.support.design
+    api libs.support.constraintLayout
+    api libs.arch.lifecycle
+
+    api libs.dagger.dagger
+    api libs.dagger.android
+
+    api project (':resources')
+}

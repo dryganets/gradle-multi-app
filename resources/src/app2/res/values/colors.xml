@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_brand">#6264A7</color>
+    <color name="bluepurple_dark">#FF3E4585</color>
+
+    <color name="colorPrimary">@color/app_brand</color>
+    <color name="colorPrimaryDark">@color/bluepurple_dark</color>
+    <color name="colorAccent">@color/app_brand</color>
+</resources>

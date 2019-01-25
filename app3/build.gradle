@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion projectCompileSdk
+    defaultConfig {
+        applicationId "com.dryganets.app3"
+        minSdkVersion projectMinSdk
+        targetSdkVersion projectTargetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Dimension mode will be used used to specify sub-type of the product insiders/dev/release
+    flavorDimensions 'app', 'mode'
+
+    productFlavors {
+        app3 {
+            // There should be only one flavor with app dimension inside of the root project
+            // This works as a selector for all other libraries
+            dimension 'app'
+        }
+
+        dev {
+            dimension 'mode'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':core')
+}

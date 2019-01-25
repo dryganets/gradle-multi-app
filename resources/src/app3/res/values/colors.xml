@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="compliant_blue">#1873BA</color>
+    <color name="compliant_blue_darker">#0D5D9D</color>
+
+    <color name="colorPrimary">@color/compliant_blue</color>
+    <color name="colorPrimaryDark">@color/compliant_blue_darker</color>
+    <color name="colorAccent">@color/compliant_blue</color>
+</resources>
